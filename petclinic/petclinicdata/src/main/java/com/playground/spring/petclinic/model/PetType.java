@@ -7,8 +7,12 @@ package com.playground.spring.petclinic.model;
  * @author bubaibal
  *
  */
-public class PetType {
+public class PetType extends BaseEntity{
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 4045068348752377749L;
 	private String name;
 
 	/**
