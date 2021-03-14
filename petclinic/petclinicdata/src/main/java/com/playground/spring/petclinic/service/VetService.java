@@ -3,19 +3,12 @@
  */
 package com.playground.spring.petclinic.service;
 
-import java.util.Set;
-
 import com.playground.spring.petclinic.model.Vet;
 
 /**
  * @author bubaibal
  *
  */
-public interface VetService {
+public interface VetService extends CrudService<Vet, Long>{
 
-	Vet findById(Long Id);
-
-	Vet save(Vet vet);
-
-	Set<Vet> findAll();
 }
