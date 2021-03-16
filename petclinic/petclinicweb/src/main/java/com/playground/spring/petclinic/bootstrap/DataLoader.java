@@ -10,8 +10,6 @@ import com.playground.spring.petclinic.model.Owner;
 import com.playground.spring.petclinic.model.Vet;
 import com.playground.spring.petclinic.service.OwnerService;
 import com.playground.spring.petclinic.service.VetService;
-import com.playground.spring.petclinic.service.map.OwnerServiceMap;
-import com.playground.spring.petclinic.service.map.VetServiceMap;
 
 /**
  * @author bubaibal
@@ -23,13 +21,18 @@ public class DataLoader implements CommandLineRunner {
 	private final OwnerService ownerService;
 	private final VetService vetService;
 	
+	
+
 	/**
-	 * 
+	 * @param ownerService
+	 * @param vetService
 	 */
-	public DataLoader() {
-		this.ownerService = new OwnerServiceMap();
-		this.vetService = new VetServiceMap();
+	public DataLoader(OwnerService ownerService, VetService vetService) {
+		this.ownerService = ownerService;
+		this.vetService = vetService;
 	}
+
+
 
 	@Override
 	public void run(String... args) throws Exception {
