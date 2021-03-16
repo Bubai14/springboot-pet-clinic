@@ -6,13 +6,13 @@ package com.playground.spring.petclinic.service.map;
 import java.util.Set;
 
 import com.playground.spring.petclinic.model.Owner;
-import com.playground.spring.petclinic.service.CrudService;
+import com.playground.spring.petclinic.service.OwnerService;
 
 /**
  * @author bubaibal
  *
  */
-public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements CrudService<Owner, Long> {
+public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements OwnerService {
 
 	@Override
 	public Set<Owner> findAll(){
@@ -37,6 +37,12 @@ public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements 
 	@Override
 	public void deleteById(Long id) {
 		super.deleteById(id);
+	}
+
+	@Override
+	public Owner findByLastName(String lastName) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

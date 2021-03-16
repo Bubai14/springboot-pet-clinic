@@ -6,13 +6,13 @@ package com.playground.spring.petclinic.service.map;
 import java.util.Set;
 
 import com.playground.spring.petclinic.model.Pet;
-import com.playground.spring.petclinic.service.CrudService;
+import com.playground.spring.petclinic.service.PetService;
 
 /**
  * @author bubaibal
  *
  */
-public class PetServiceMap extends AbstractMapService<Pet, Long> implements CrudService<Pet, Long> {
+public class PetServiceMap extends AbstractMapService<Pet, Long> implements PetService {
 
 	@Override
 	public Set<Pet> findAll(){
