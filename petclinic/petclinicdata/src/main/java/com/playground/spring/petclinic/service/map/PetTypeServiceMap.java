@@ -5,6 +5,8 @@ package com.playground.spring.petclinic.service.map;
 
 import java.util.Set;
 
+import org.springframework.stereotype.Service;
+
 import com.playground.spring.petclinic.model.PetType;
 import com.playground.spring.petclinic.service.PetTypeService;
 
@@ -12,6 +14,7 @@ import com.playground.spring.petclinic.service.PetTypeService;
  * @author bubaibal
  *
  */
+@Service
 public class PetTypeServiceMap extends AbstractMapService<PetType, Long> implements PetTypeService {
 
 	@Override
