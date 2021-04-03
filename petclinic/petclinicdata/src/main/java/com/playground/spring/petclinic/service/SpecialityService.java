@@ -9,6 +9,6 @@ import com.playground.spring.petclinic.model.Speciality;
  * @author bubaibal
  *
  */
-public interface SpecialitiesService extends CrudService<Speciality, Long> {
+public interface SpecialityService extends CrudService<Speciality, Long> {
 
 }
