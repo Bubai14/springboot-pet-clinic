@@ -5,20 +5,39 @@ package com.playground.spring.petclinic.model;
 
 import java.time.LocalDate;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
 /**
  * @author bubaibal
  *
  */
+@Entity
+@Table(name = "pets")
 public class Pet extends BaseEntity{
 	
 	/**
-	 * 
+	 * Auto generated serial ID
 	 */
 	private static final long serialVersionUID = -2112850313105491164L;
+	
+	@ManyToOne
+	@JoinColumn(name = "type_id")
 	private PetType petType;
+	
+	@ManyToOne
+	@JoinColumn(name = "owner_id")
 	private Owner owner;
+	
+	@Column(name = "birth_date")
 	private LocalDate birthDate;
+	
+	@Column(name = "name")
 	private String name;
+	
 	/**
 	 * @return the petType
 	 */
