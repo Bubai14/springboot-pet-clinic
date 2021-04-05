@@ -3,10 +3,16 @@
  */
 package com.playground.spring.petclinic.model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
 /**
  * @author bubaibal
  *
  */
+@Entity
+@Table(name = "specialities")
 public class Speciality extends BaseEntity {
 
 	/**
@@ -14,6 +20,7 @@ public class Speciality extends BaseEntity {
 	 */
 	private static final long serialVersionUID = -2360434492846053203L;
 	
+	@Column(name = "description")
 	private String description;
 
 	/**
