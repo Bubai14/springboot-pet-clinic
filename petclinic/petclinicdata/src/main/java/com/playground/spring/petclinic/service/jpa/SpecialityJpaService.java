@@ -3,7 +3,7 @@
  */
 package com.playground.spring.petclinic.service.jpa;
 
-import java.util.Collections;
+import java.util.HashSet;
 import java.util.Set;
 
 import org.springframework.context.annotation.Profile;
@@ -32,7 +32,7 @@ public class SpecialityJpaService implements SpecialityService {
 
 	@Override
 	public Set<Speciality> findAll() {
-		Set<Speciality> specialities = Collections.emptySet();
+		Set<Speciality> specialities = new HashSet<>();
 		specialityRepository.findAll().forEach(specialities::add);
 		return specialities;
 	}

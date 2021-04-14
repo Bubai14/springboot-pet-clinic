@@ -3,7 +3,7 @@
  */
 package com.playground.spring.petclinic.service.jpa;
 
-import java.util.Collections;
+import java.util.HashSet;
 import java.util.Set;
 
 import org.springframework.context.annotation.Profile;
@@ -32,7 +32,7 @@ public class PetJpaService implements PetService {
 
 	@Override
 	public Set<Pet> findAll() {
-		Set<Pet> pets = Collections.emptySet();
+		Set<Pet> pets = new HashSet<>();
 		petRepository.findAll().forEach(pets::add);
 		return pets;
 	}
